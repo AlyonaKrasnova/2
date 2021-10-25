@@ -1,0 +1,17 @@
+3.
+#include <iostream>
+using namespace std;
+
+int NeVragi(int x, int y)
+{
+    int s = 0;
+    for (int i = 1; i <= x / 2; i++)
+        if (x % i == 0) s += i;
+    return s;
+}
+int main()
+{
+    for (int a = 1; a <= 10000; a++)
+        for (int b = 1; b <= 10000; b++)
+            if ((NeVragi(a, b) == b)&&(NeVragi(b,a)==a))
+                cout << a << "  " << b << endl;}
