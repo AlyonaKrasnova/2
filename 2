@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int Fibo(int a, int b, int c,int N)
+{
+    for (int i = 4; i <= N; i++) {
+        a = b;
+        b = c;
+        c = a+b;
+        
+    }
+    return c;
+
+}
+
+int main() {
+    int N, a = 1, b = 2, c;
+    c = a + b;
+    cin >> N;
+    cout << endl;
+    if (N == 0)
+        cout << 1;
+    if (N == 1)
+        cout << a;
+    if (N == 2)
+        cout << b;
+    if (N == c)
+        cout << c;
+    if (N >= 4)
+        cout << Fibo(a, b, c,N);
+
+}
