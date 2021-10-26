@@ -12,6 +12,7 @@ int NeVragi(int x, int y)
 int main()
 {
     for (int a = 1; a <= 10000; a++)
-        for (int b = 1; b <= 10000; b++)
+        for (int b = a + 1; b <= 10000; b++)
             if ((NeVragi(a, b) == b)&&(NeVragi(b,a)==a))
-                cout << a << "  " << b << endl;}
+                cout << a << "  " << b << endl;
+}
